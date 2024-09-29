@@ -1,0 +1,3 @@
+pre-push:
+  parallel: true
+  run: cp Lab6-GrupoB-VisualizacaoFinal.html index.html
