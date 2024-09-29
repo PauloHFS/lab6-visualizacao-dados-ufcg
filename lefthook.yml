@@ -1,3 +1,6 @@
 pre-push:
   parallel: true
-  run: cp Lab6-GrupoB-VisualizacaoFinal.html index.html
+  commands:
+    gen-index:
+      glob: "*.html"
+      run: cp Lab6-GrupoB-VisualizacaoFinal.html index.html && git add index.html && git commit -m "Update index.html"
