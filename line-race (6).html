@@ -1,0 +1,226 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=line-race&code=MYewdgzgLgBFCmBDAtgYRAGxAJwjAvDAN4BQM5MA5AGLzbaLYCWlAXFQMTXUBsvAjJQA0MAPSiYANTrJ4GABYgYwDIyW16jJmQqUAssAAyjeGDaduAQQCsABlvCxE4wzAArRMtXYlBl6Z1yfTpgeAATeAhzSg57ACEAJksHEXEpOgivNRg9EPDIwKoAJXCYOIBXDAxojgAWSwAOVG5HNMsAL0qsnxgSsLLKjELKAHUmKqYUKPYY-wB2WoARAE5WiQ6ulWyxianhgBUkZBhDEChy6c5UJZ57NfTsTK2ew5QTs4vhkrBESqga6gJACiDTuqXWyBMWG6Sm-vwwUGGcVM8CgUHANQAzJjUKgeDx7tJHvAYWUUWjwEiGAAjeQoAHUOINJb3FyIdyeZ5KOI0unIA4AT3ocmqMw4-OWyxaThgGwwpP2QuwIpIAF8ANwkEigSCwBgAd0WiCgnkIAG0dGaaHQGMxhDwhLYhJihPwnfw5q7lkIEk6Eg7_T6Gs6nZj-M6HZjI57ak7Y0JagkE0nai7UwmY967EJs9YXdZvTxrEIeN6FkJQRWnQ0kw1iw1vcsncsky2hMtau3i8tg27O33XbZ-0PB8W3Q63d7-Px-77XYH-FHXbUx7dXTxew0XfxmV6Xb6kwk3T7pyeAx6fXOEtfL4eEsXrw_MX6lwlMd63x_3z70wlap2_x4ABdIRLX0IwTDMV1HRgp04NghD4KQxCUPg8NO17cMLyvP1cJPH0H0jYN_wTYNrHDfEhDmB0a3bZsx3sQd3UYt1mO3fgk2nKcF2fV0wz47dMX7EiZ37axOOsXs134ItXTmLC5l7RS5KU1SVPUj01I9Kc5h0qdQRAsDcmwUIIiiPjw2QuN2xsxtbPsuzHIc5ynNclz3LczyPO8tzj0XH1vRXEtO2oitPTdTj-DHP952i6K5kM8grT6AYqmEb0rNQrLMpy7K8tygr8qK3KJwfT0hIzHMnVzJNrGLAsSyTHgQu7SLt19RKYCtHYMEmZBzJdQqhuKkb4LHLDVzk11gxvfj43mlNO3Iktw3kqjgy3LtB23Wwdr2wdwtsTC2tdfzp3Yi7Tsu87Tv7Gdboe6c7uex77qe17ns6q1XmOU5zgGpNhsyw8fVBkHwYrSH_Kvfd9wA71MXKpHnXK4NMTR4j0LTYsgtxnH8YTAm8cJknibJomKdJynyap2niZgIKGeLJmRBXL7KDhP5hE7IHRr53L0Ko07XTHUWRfFqKJbFyWZeluWpYVmSpvvZ0XWxZ1i0xTXtY13Wtb1nX9aNw2TfZ5EwFRdEoJvXnbf5-33Wg8MUxzEshclwNPc9BJvd9n0_Z9_2g8DkOA7D4Pw9DiPo9Ds3eXpZ0eYd-2sKdhM3YdGioaw_sAz9Q9YZ9Qu3yL0uS_L4vK7LquK-ruva4bmum_ryv2cVYU0oI5O7fg8KsInXsPzwo98JHseC5byfG6n5vp7n2eF5npeK8MoDNS1bVwGgOAjggI0TQIGADX3xAADpIQABwACh8fUCAAPmIQplXObAwCPkB9VPiBetCK-EgAJTn0QNfK-AA3RAGByjwBEEwMAEQAAeACH4wCvqQCgGCYACiQNgdg_Blh2BgAAahgHAxBoFMEUDgaAWQ7AIFQJgYUDBCAUAADkUDwHYLfM0tggKFFVAAgBmoBGnwAGaqCgFfIRWpRHlDAMAKATBwBHzkVIp-GCdTbxYf1Q-VoNC2hYCIcC_goJUGMqZSIjgOalAqJ3KgPU-rmSoD9d4_0rGcwRFY82lsMRGJ5IgWkCdnFKhFJQNehRNGwDCMaRAEBURjCgPIag4wEC4F0eEjRW9YBxOYJEQwTBt7mnCYUeAwA6TYCgBAU-5RFEYFPkgMpV9tEQBELI-RijlFNKOMg9BlCYAQOwDAaJJo4lQAAJL9EIJQYZsTUQAH1KDEJ3igTUfShkxNGQkpJKS6BVIvhceQaCmF9KYGEdgMzRkTIoWsigoifDIBPpcs5VALnzINMIY5lCoCuAgKInAyB2C9JuZgqAAoL6cKoKInZ2APnAsoTqKFABzQFny4XkHZM8i0aK0VECGUwWQkAlFgBmNgxgjhEUIDwQQ2wMBVTXOxTc3FYR8WmAgESmY2j2GyCsfgcw2jaWorRXwhl5BVSCooGKtZAjVl9JyUwPJBSoCn32RAQ5QKbmgvBTMXqFtYVwteeM55BqrnivIKqz-ABlAUyBqSYHYKIyBcT6U3J-LQ5ZyBnVrNMKACIKKRUwAQSSnBeqGUChmNQkA3LPVwvRJgRRF92BWgjdy4VcK6WmpgPAZAF86RsogH6kVfzgAXBmHKyx0bgXUigdgC1oAtVUFADgZlPwEBWugFmkN2KdXwAtaCjAEL1X-v1KcxJ7BrDkDaOUAlJp4FKE8JEcFEAIDlAYOsmAOq6QwAvowTw1gM0YMlWmitmCmAIGQL2gU_aC0MtAFgXB7r0B3ogGabRQEZQAFUIAYrncoHAQz4BQrAKczw27V3zoAI7lCYOCjN6a0XdovVe9RIrh1hFHTATEMogQQEXcu1d26wjYAAMdKGieuuBdJYOoulfw6RESskwBABfDp79CCDpgOyfFxoiWLBXdx8A7BYyMWOQaxN4r2NrNOTMA1cz3nHsoRAEAK7QjsGaSfcVcGbmn20warZySES7OOZ1Zhp6kMSYoAgBBUAZjUH-ZUTw_B2BAjAZgcoABzkj_6pCnoAM_MFiesvAboYCyAUDgSIMAgSQegxFq--C7AAFoDy1AAZ2yh_bRHWYbaYVJaWQVMZmL6C-CC8vMPgFZxDA790wD-WAKAFqmDtAhTFartWoAjHgEwRF8gsuUFtRgMIlANPHM08wkAcboPXpuU2ugMx6HQMWJEYApWQXMERYi2bVBEAIIKStjBF8QBspY4mygDQACkVjlgXdTZQ0bFB-0bfgVNyhMzVO73kzAW1FIAVUGsBdj7GXeuhDq3QIbt3o0IMsDt_NyG1maohZQYAxp4CIpwAKPbMBXXwFOEj47VBkCnLCP2sHmC7vkAFFDgpz3MFY5mJIXz_m8BZpgAABWYLIJgPRDDlERWSj7WOcf8eJfjwnxP-ccMOBVvtVWGUEebcirqToYBK7nMr4zcK2sNaa-wOcrXwDtc6913r_XBsaY-9tgpxhqRyGp2sv52BIRok2_Nkk-BH4u4-xgnwJpKUwCbJ7iz5X6vS9t3CyBXXheI5y6DgPlDNeNYhfdarGC2sda6z1mYJuSdosPVKkb0bEXMGeeZ8ggOZhzH-zAcVa2M9UArxjr76IfuUGnP98V6IE114u_n45ZaYd9_ydAYB18-8oKOcC7T386DypaeKiA1r-szGAJzlQ8AMcIZD7DuFqH0OYeG7dwR0aZkAC1xs_axYy6r8PS29QiDC2PAbKcQDGfA8r7BbBm_E1fsFCO4FsoiBjhgpDtDi_ogu_vvpgqmhqFqBgsgAKKgOUkqqMgAPLMZEpXxMYsbSJiokBtIKJEo1bQo_RdIoA9KFBpDUByIeZKCgaeAgK_yMCMaEEIg-D0a6jrIjKogTKHzTIbLzKLIkLaIyrkBwEIGMBIGoioEsbj6yrT6RCJol4UDGpGp8GGrUY3a0rYFajYCqJCJAA
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.1/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-graph-modularity@2/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.1/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    const teamColors = {
+    'Ferrari': '#FF6F61', // Vermelho claro Ferrari
+    'McLaren': '#FFA500', // Laranja claro McLaren
+    'Mercedes': '#00B2A0', // Verde claro Mercedes
+    'Red Bull': '#4A8CFF', // Azul claro Red Bull
+    'Williams': '#0074D9', // Azul claro Williams
+    'Team Lotus': '#C4D600', // Verde claro Team Lotus
+    'Renault': '#F2E800', // Amarelo claro Renault
+    'Benetton': '#33CC66', // Verde claro Benetton
+    'Brabham': '#FFB84D', // Laranja claro Brabham
+    'Tyrrell': '#6699FF' // Azul claro Tyrrell
+};
+
+const rawData = [
+  ['Ferrari',6,0,3,10,17,19,20,26,26,28,30,31,36,36,37,40,40,42,42,43,43,47,49,50,50,53,59,65,69,74,80,80,82,85,89,90,92,92,94,95,98,104,104,104,104,105,106,109,114,120,126,136,145,160,168,183,184,193,202,210,211,216,217,220,222,222,225,225,230,236,239,239,239,243,244,246],
+  ['McLaren',1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,4,8,11,17,20,20,20,20,21,25,26,38,44,48,51,66,76,82,90,95,100,100,100,100,103,112,119,126,130,131,133,134,144,144,152,158,160,165,171,178,178,178,178,178,178,178,178,178,179,179,179,180],
+  ['Mercedes',131,0,0,0,0,4,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,10,13,29,45,64,76,87,102,115,124,125,125,127],
+  ['Red Bull',9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,15,27,34,47,50,50,52,55,59,62,64,75,92,113,120],
+  ['Williams',3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,11,15,16,17,18,22,31,40,40,42,44,51,61,71,78,83,95,103,103,103,103,107,108,112,113,113,113,113,113,113,113,113,114,114,114,114,114,114,114,114,114,114,114,114,114],
+  ['Team Lotus',32,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2,8,8,13,20,23,23,24,29,37,37,37,37,38,38,38,41,43,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45, 45, 45, 45, 45],
+  ['Renault',4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,4,7,11,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,16,17,25,33,33,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35],
+  ['Benetton',22,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,2,4,5,6,7,15,26,26,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27],
+  ['Brabham',34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,4,6,6,6,8,8,11,14,16,20,22,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23],
+  ['Tyrrell',25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,11,16,18,19,20,20,21,21,21,21,22,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23],
+];
+
+
+
+const teamsData = rawData.map(row => {
+    return row.slice(2).map((value, index) => ({
+        year: 1950 + index,
+        income: value,
+        teamName: row[0]
+    }));
+}).flat();
+
+function run() {
+    const teams = ['Ferrari', 'McLaren', 'Mercedes', 'Red Bull', 'Williams', 'Team Lotus', 'Renault', 'Benetton', 'Brabham', 'Tyrrell'];
+    const datasetWithFilters = [];
+    const seriesList = [];
+
+    echarts.util.each(teams, function (team) {
+        var datasetId = 'dataset_' + team;
+        datasetWithFilters.push({
+            id: datasetId,
+            fromDatasetId: 'dataset_raw',
+            transform: {
+                type: 'filter',
+                config: {
+                    and: [
+                        { dimension: 'year', gte: 1950 },
+                        { dimension: 'teamName', '=': team }
+                    ]
+                }
+            }
+        });
+        seriesList.push({
+            type: 'line',
+            datasetId: datasetId,
+            showSymbol: false,
+            name: team,
+            encode: {
+                x: 'year',
+                y: 'income',
+                tooltip: ['income']
+            },
+            emphasis: {
+                focus: 'series',
+                blurScope: 'coordinateSystem',
+                lineStyle: {
+                    width: 5  // Aumentando a espessura da linha para 5
+                }
+            },
+            itemStyle: {
+                color: teamColors[team] // Usando a cor definida para a equipe
+            },
+            lineStyle: {
+                width: 3 // Espessura padrão da linha
+            }
+        });
+    });
+
+    const option = {
+      animationDuration: 4000,
+      dataset: [
+          {
+              id: 'dataset_raw',
+              source: teamsData
+          },
+          ...datasetWithFilters
+      ],
+      title: {
+          text: 'Formula 1: Evolução de Vitórias das 10 melhores Equipes (1950-2024)',
+          left: 'center',
+          top: '20px',
+          textStyle: {
+              fontSize: 24,
+              fontWeight: 'bold'
+          }
+      },
+      tooltip: {
+            order: 'valueDesc',
+            trigger: 'axis',
+            position: ['8%', '9%']
+        },
+      legend: {
+          data: teams,
+          bottom: '5%',
+          left: 'center'
+      },
+      xAxis: {
+          type: 'category',
+          nameLocation: 'middle'
+      },
+      yAxis: {
+          name: 'Vitórias em Primeiro Lugar',
+          nameLocation: 'middle',
+          nameTextStyle: {
+              padding: [0, 0, 20, 0],
+              fontSize: 20,
+              fontWeight: 'bold'
+          },
+          axisLabel: {
+              formatter: value => value,
+              rotate: 90,
+              textStyle: {
+                  align: 'center',
+                  fontSize: 14,
+                  fontWeight: 'bold'
+              }
+          }
+      },
+      grid: {
+          left: '7%', 
+          right: '7%',
+          bottom: '11%',
+          top: '7%'
+      },
+      series: seriesList.map(series => ({
+          ...series,
+          symbol: 'circle',
+          lineStyle: {
+              width: 3 
+          }
+      })),
+      dataZoom: [
+          {
+              type: 'slider',
+              xAxisIndex: 0
+          },
+          {
+              type: 'inside',
+              xAxisIndex: 0
+          }
+      ]
+  };
+
+    myChart.setOption(option);
+}
+
+function filterTeam(team) {
+    // Função para aplicar o filtro
+    const datasetId = 'dataset_' + team;
+    myChart.setOption({
+        series: [{
+            datasetId: datasetId
+        }]
+    });
+}
+
+run();
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
