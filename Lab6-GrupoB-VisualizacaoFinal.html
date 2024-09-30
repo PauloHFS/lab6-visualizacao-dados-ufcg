@@ -144,6 +144,14 @@
         Tyrrell: "#6699FF", // Azul claro Tyrrell
       };
 
+      const piloto = {
+        name: "airton senna",
+        melhorTempo: "21:13",
+        vitoriasPrimeiro: 21,
+        vitoriasSegudo: 213,
+        vitoriasTerceiro: 323,
+      };
+
       const rawData = [
         [
           "Ferrari",
@@ -937,14 +945,150 @@
         ],
       ];
 
+      const driverDetails = {
+        Mercedes: [
+          131,
+          1,
+          83,
+          40,
+          27,
+          "Lewis",
+          "Hamilton",
+          "British",
+          "https://upload.wikimedia.org/wikipedia/en/0/05/Mercedes_Benz_Logo_2010.svg", // Logo da Mercedes
+          "https://upload.wikimedia.org/wikipedia/commons/a/a9/Lewis_Hamilton_2018.jpg", // Foto do Lewis Hamilton
+        ],
+        Ferrari: [
+          6,
+          30,
+          72,
+          32,
+          12,
+          "Michael",
+          "Schumacher",
+          "German",
+          "https://upload.wikimedia.org/wikipedia/en/1/1d/Scuderia_Ferrari_logo.svg", // Logo da Ferrari
+          "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FFicheiro%3ALogotipo_da_Scuderia_Ferrari.svg&psig=AOvVaw2nor96_bUPdBbvnTh04Q3x&ust=1727755103534000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKiIyrvj6YgDFQAAAAAdAAAAABAE", // Foto do Michael Schumacher
+        ],
+        "Red Bull": [
+          9,
+          830,
+          61,
+          30,
+          16,
+          "Max",
+          "Verstappen",
+          "Dutch",
+          "https://upload.wikimedia.org/wikipedia/en/1/1f/Red_Bull_Racing_logo.svg", // Logo da Red Bull
+          "https://upload.wikimedia.org/wikipedia/commons/8/8c/Max_Verstappen_2021.jpg", // Foto do Max Verstappen
+        ],
+        McLaren: [
+          1,
+          102,
+          35,
+          12,
+          8,
+          "Ayrton",
+          "Senna",
+          "Brazilian",
+          "https://upload.wikimedia.org/wikipedia/en/7/7f/McLaren_logo.svg", // Logo da McLaren
+          "https://upload.wikimedia.org/wikipedia/commons/9/91/Ayrton_Senna_1991.jpg", // Foto do Ayrton Senna
+        ],
+        Williams: [
+          3,
+          95,
+          28,
+          12,
+          3,
+          "Nigel",
+          "Mansell",
+          "British",
+          "https://upload.wikimedia.org/wikipedia/en/5/5e/WilliamsF1_logo.svg", // Logo da Williams
+          "https://upload.wikimedia.org/wikipedia/commons/4/44/Nigel_Mansell_2011.jpg", // Foto do Nigel Mansell
+        ],
+        Benetton: [
+          22,
+          30,
+          19,
+          11,
+          8,
+          "Michael",
+          "Schumacher",
+          "German",
+          "https://upload.wikimedia.org/wikipedia/en/7/75/Benetton_Formula_One_team_logo.svg", // Logo da Benetton
+          "https://upload.wikimedia.org/wikipedia/commons/a/a8/Michael_Schumacher_2006.jpg", // Foto do Michael Schumacher
+        ],
+        Renault: [
+          4,
+          4,
+          17,
+          15,
+          9,
+          "Fernando",
+          "Alonso",
+          "Spanish",
+          "https://upload.wikimedia.org/wikipedia/en/f/f4/Renault_Logo.svg", // Logo da Renault
+          "https://upload.wikimedia.org/wikipedia/commons/6/65/Fernando_Alonso_2019.jpg", // Foto do Fernando Alonso
+        ],
+        Tyrrell: [
+          25,
+          328,
+          15,
+          4,
+          1,
+          "Jackie",
+          "Stewart",
+          "British",
+          "https://upload.wikimedia.org/wikipedia/en/5/55/Tyrrell_Logo.svg", // Logo da Tyrrell
+          "https://upload.wikimedia.org/wikipedia/commons/0/05/Jackie_Stewart_2010.jpg", // Foto do Jackie Stewart
+        ],
+        Brabham: [
+          34,
+          137,
+          13,
+          9,
+          7,
+          "Nelson",
+          "Piquet",
+          "Brazilian",
+          "https://upload.wikimedia.org/wikipedia/en/d/d1/Brabham_Logo.svg", // Logo da Brabham
+          "https://upload.wikimedia.org/wikipedia/commons/2/2e/Nelson_Piquet_2010.jpg", // Foto do Nelson Piquet
+        ],
+        "Team Lotus": [
+          32,
+          207,
+          11,
+          2,
+          3,
+          "Mario",
+          "Andretti",
+          "American",
+          "https://upload.wikimedia.org/wikipedia/en/b/b3/Lotus_Cars_Logo.svg", // Logo da Team Lotus
+          "https://upload.wikimedia.org/wikipedia/commons/5/53/Mario_Andretti_2013.jpg", // Foto do Mario Andretti
+        ],
+      };
+
+      //   const teamColors = {
+      //     Ferrari: "#FF6F61", // Vermelho claro Ferrari
+      //     McLaren: "#FFA500", // Laranja claro McLaren
+      //     Mercedes: "#00B2A0", // Verde claro Mercedes
+      //     "Red Bull": "#4A8CFF", // Azul claro Red Bull
+      //     Williams: "#0074D9", // Azul claro Williams
+      //     "Team Lotus": "#C4D600", // Verde claro Team Lotus
+      //     Renault: "#F2E800", // Amarelo claro Renault
+      //     Benetton: "#33CC66", // Verde claro Benetton
+      //     Brabham: "#FFB84D", // Laranja claro Brabham
+      //     Tyrrell: "#6699FF", // Azul claro Tyrrell
+      //   };
+
       const teamsData = rawData
-        .map((row) =>
-          row.slice(2).map((value, index) => ({
+        .map((row) => {
+          return row.slice(2).map((value, index) => ({
             year: 1950 + index,
             income: value,
             teamName: row[0],
-          }))
-        )
+          }));
+        })
         .flat();
 
       function run() {
@@ -965,7 +1109,6 @@
 
         echarts.util.each(teams, function (team) {
           var datasetId = "dataset_" + team;
-
           datasetWithFilters.push({
             id: datasetId,
             fromDatasetId: "dataset_raw",
@@ -979,7 +1122,6 @@
               },
             },
           });
-
           seriesList.push({
             type: "line",
             datasetId: datasetId,
@@ -1062,8 +1204,8 @@
             bottom: "11%",
             top: "7%",
           },
-          series: seriesList.map((serie) => ({
-            ...serie,
+          series: seriesList.map((series) => ({
+            ...series,
             symbol: "circle",
             lineStyle: {
               width: 3,
@@ -1081,12 +1223,101 @@
           ],
         };
 
+        const piloto = {
+          name: "Ayrton Senna",
+          melhorTempo: "21:13",
+          vitoriasPrimeiro: 21,
+          vitoriasSegudo: 213,
+          vitoriasTerceiro: 323,
+        };
+
+        myChart.on("click", function (params) {
+          if (params.componentType === "series") {
+            var clickedTeam = params.seriesName; // Nome do time clicado
+            var clickedYearIndex = params.dataIndex; // Índice do ano clicado
+
+            const infoCard1 = document.getElementById("info-card");
+            const strongElements = document.querySelectorAll(
+              "#info-card .graph-bar"
+            ); // Seleciona todos os <strong> dentro de #info-card
+            strongElements.forEach((element) => {
+              element.style.background = teamColors[clickedTeam]; // Define a nova cor do texto
+            });
+            infoCard1.style.borderColor = teamColors[clickedTeam]; // Define a nova cor da borda
+            // Adiciona box shadow com a mesma cor da borda
+            infoCard1.style.boxShadow = `0 4px 8px ${teamColors[clickedTeam]}`; // Ajuste os valores conforme necessário
+
+            // Atualiza o conteúdo do card com as informações do piloto
+            const cardContent = document.getElementById("card-content");
+            // const container = document.getElementById("container");
+            // container.style.display = "none";
+
+            // Adiciona a URL da logo do time e a foto do piloto
+            const teamLogoUrl = driverDetails[clickedTeam][8]; // URL da logo do time
+            const driverImageUrl = driverDetails[clickedTeam][9]; // URL da foto do piloto
+            const wins1st = driverDetails[clickedTeam][2]; // Vitórias em 1º
+            const wins2nd = driverDetails[clickedTeam][3]; // Vitórias em 2º
+            const wins3rd = driverDetails[clickedTeam][4]; // Vitórias em 3º
+
+            // Cálculo da largura das barras proporcional às vitórias
+            const maxWins = Math.max(wins1st, wins2nd, wins3rd);
+            const barWidth1 = (wins1st / maxWins) * 100; // Percentual da barra 1
+            const barWidth2 = (wins2nd / maxWins) * 100; // Percentual da barra 2
+            const barWidth3 = (wins3rd / maxWins) * 100; // Percentual da barra 3
+
+            cardContent.innerHTML = `
+            <strong><span>Piloto:</span> ${driverDetails[clickedTeam][5]} ${driverDetails[clickedTeam][6]}</strong><br>
+            <strong>Vitórias em 1º:</strong> ${wins1st}<br>
+            <div class="graph-bar" style="width: ${barWidth1}%;"></div>
+            <strong>Vitórias em 2º:</strong> ${wins2nd}<br>
+            <div class="graph-bar" style="width: ${barWidth2}%;"></div>
+            <strong>Vitórias em 3º:</strong> ${wins3rd}<br>
+            <div class="graph-bar" style="width: ${barWidth3}%;"></div>
+            <strong>Time:</strong> ${clickedTeam}<br>
+            <button id="close-button" onclick="document.getElementById('info-card').style.display='none'; container.style.display='block';">Fechar</button>
+        `;
+
+            // Posiciona o card no local do clique
+            const infoCard = document.getElementById("info-card");
+            infoCard.style.display = "block"; // Mostra o card
+          }
+        });
+
         myChart.setOption(option);
+      }
+
+      function filterTeam(team) {
+        // Função para aplicar o filtro
+        const datasetId = "dataset_" + team;
+        myChart.setOption({
+          series: [
+            {
+              datasetId: datasetId,
+            },
+          ],
+        });
       }
 
       run();
 
+      if (option && typeof option === "object") {
+        myChart.setOption(option);
+      }
+
       window.addEventListener("resize", myChart.resize);
+
+      // Evento para fechar o card
+      document
+        .querySelector(".close-btn")
+        .addEventListener("click", function () {
+          //   const container = document.getElementById("container");
+          //   container.style.display = "block";
+          // adicionar classe active en nody
+
+          // remover
+          const infoCard = document.getElementById("info-card");
+          infoCard.style.display = "none"; // Esconde o card
+        });
     </script>
   </body>
 </html>
