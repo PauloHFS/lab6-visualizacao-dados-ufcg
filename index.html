@@ -123,11 +123,18 @@
           style="
             font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
           "
-          ><strong>Título da visualização</strong></span
+          ><strong
+            >Formula 1: Evolução de Vitórias das 10 melhores Equipes
+            (1950-2024)</strong
+          ></span
         >
       </h2>
       <p style="text-align: justify; padding: 10px 50px 10px 50px">
-        Breve resumo sobre os dados (e as histórias) visualizadas.
+        Este projeto oferece uma análise detalhada das vitórias das principais
+        equipes de Fórmula 1 ao longo dos últimos 74 anos, de 1950 a 2024. Com
+        foco nas 10 equipes mais icônicas da competição - como Ferrari, McLaren,
+        Mercedes, Red Bull, e Williams - você poderá explorar de maneira
+        dinâmica e visual a evolução de suas conquistas.
       </p>
     </div>
     <div id="orelativo">
@@ -141,15 +148,40 @@
     </div>
     <div id="footer" style="height: 2%">
       <p style="text-align: justify; padding: 20px 50px 0px 50px">
-        <b>Dicas para interagir com a visualização</b>:
+        <b>Recursos Interativos</b>:
       </p>
       <ul style="padding: 0px 50px 10px 75px">
         <li>
-          Inserir aqui breves instruções para o usuário navegar na visualização
-          e usar o máximo dos recursos de interação disponíveis.
+          Clique nas linhas do gráfico para obter detalhes específicos sobre as
+          equipes e seus pilotos.
         </li>
-        <li>...</li>
-        <li>...</li>
+        <li>
+          Visualize as vitórias em 1º, 2º e 3º lugares de cada equipe ao longo
+          dos anos.
+        </li>
+        <li>
+          Descubra os principais pilotos que marcaram a história de suas
+          equipes, como Ayrton Senna pela McLaren e Michael Schumacher pela
+          Ferrari.
+        </li>
+      </ul>
+      <p style="text-align: justify; padding: 20px 50px 0px 50px">
+        <b>Como Navegar</b>:
+      </p>
+      <ul style="padding: 0px 50px 10px 75px">
+        <li>
+          Use os filtros para selecionar uma equipe específica e explorar sua
+          trajetória de vitórias.
+        </li>
+        <li>
+          Clique nas séries do gráfico para exibir informações detalhadas em um
+          cartão interativo, que mostra o número de vitórias, o piloto principal
+          e outros dados importantes.
+        </li>
+        <li>
+          Navegue pelo período de 1950 a 2024 usando o controle deslizante para
+          ver o desempenho ano a ano.
+        </li>
       </ul>
     </div>
 
@@ -1217,15 +1249,15 @@
             },
             ...datasetWithFilters,
           ],
-          title: {
-            text: "Formula 1: Evolução de Vitórias das 10 melhores Equipes (1950-2024)",
-            left: "center",
-            top: "20px",
-            textStyle: {
-              fontSize: 24,
-              fontWeight: "bold",
-            },
-          },
+          // title: {
+          //   text: "Formula 1: Evolução de Vitórias das 10 melhores Equipes (1950-2024)",
+          //   left: "center",
+          //   top: "20px",
+          //   textStyle: {
+          //     fontSize: 24,
+          //     fontWeight: "bold",
+          //   },
+          // },
           tooltip: {
             order: "valueDesc",
             trigger: "axis",
